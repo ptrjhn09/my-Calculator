@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [addNum, setNum] = useState (1);
+  const [multiplyNum, setMultiplyNum] = useState (1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      
+    <div>
+
+      <button onClick={()=> setNum(addNum +1)}>add</button><br/><br/>
+      <p>{addNum}</p>
+
+      <button onClick={()=> setMultiplyNum(multiplyNum * 2)}>Multiply</button>
+      <p>{multiplyNum}</p>
+
+      <button onClick={()=> {setNum(0); setMultiplyNum(1);}}>Clear</button>
+
     </div>
+      
   );
 }
 
