@@ -13,20 +13,19 @@ function App() {
 
       
     <div>
-
       <button onClick={()=> setNum(addNum +1)}>add</button><br/><br/>
       <p>{addNum}</p>
 
       <button onClick={()=> setMultiplyNum(multiplyNum * 2)}>Multiply</button>
       <p>{multiplyNum}</p>
 
-       <button onClick={()=> setDivisionNum(divisionNum / 2)}>Multiply</button>
+       <button onClick={()=> setDivisionNum(divisionNum / 2)}>Divide</button>
        <p>{divisionNum}</p>
 
        <button onClick={()=> setSubsNum(subsNum - 1)}>Subtract</button><br/><br/>
        <p>{subsNum}</p>
-
-        <button onClick={()=> {setNum(0); setMultiplyNum(1); setDivisionNum(1); setSubsNum(100);}}>Return</button>
+       
+      <button onClick={()=> {setNum(0); setMultiplyNum(1); setDivisionNum(1); setSubsNum(100);}}>Return</button>
 
     </div>
       
