@@ -6,7 +6,8 @@ function App() {
 
   const [addNum, setNum] = useState (1);
   const [multiplyNum, setMultiplyNum] = useState (1);
-  const [divisionNum, setDivisionNum] = useState (1);
+  const [divisionNum, setDivisionNum] = useState (100);
+  const [subsNum, setSubsNum] = useState (100);
 
   return (
 
@@ -19,10 +20,13 @@ function App() {
       <button onClick={()=> setMultiplyNum(multiplyNum * 2)}>Multiply</button>
       <p>{multiplyNum}</p>
 
-       <button onClick={()=> setDivisionNum(divisionNum / 2)}>Multiply</button>
+       <button onClick={()=> setDivisionNum(divisionNum / 2)}>Divide</button>
        <p>{divisionNum}</p>
 
-        <button onClick={()=> {setNum(0); setMultiplyNum(1); setDivisionNum(1)}}>Clear</button>
+       <button onClick={()=> setSubsNum(subsNum - 1)}>Subtract</button><br/><br/>
+       <p>{subsNum}</p>
+
+      <button onClick={()=> {setNum(0); setMultiplyNum(1); setDivisionNum(100); setSubsNum(100);}}>Return</button>
 
     </div>
       
